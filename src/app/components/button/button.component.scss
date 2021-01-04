@@ -1,0 +1,22 @@
+.btn {
+    font-size: 14px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 20px;
+    border: 2px solid rgb(102, 51, 153);
+    border-radius: 24px;
+    padding: 4px 20px;
+    color: rgb(102, 51, 153);
+    opacity: 1;
+    
+    &:hover {
+        background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+        border: 2px solid transparent;
+        color: #fff;
+    }
+}
+
+.btnCust:hover{
+    background: #fff;
+    border: unset;
+    color: rgb(102, 51, 153);
+}

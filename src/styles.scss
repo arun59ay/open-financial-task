@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url('./assets/fonts/Montserrat-Thin.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url('./assets/fonts/Montserrat-SemiBold.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('./assets/fonts/Montserrat-Regular.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('./assets/fonts/Montserrat-Medium.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('./assets/fonts/Montserrat-Light.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-ExtraLight';
+    src: url('./assets/fonts/Montserrat-ExtraLight.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('./assets/fonts/Montserrat-ExtraBold.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('./assets/fonts/Montserrat-Bold.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'Montserrat-Black';
+    src: url('./assets/fonts/Montserrat-Black.ttf') format('woff2');
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('./assets/fonts/OpenSans-Bold.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'OpenSansExtraBold';
+    src: url('./assets/fonts/OpenSans-ExtraBold.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('./assets/fonts/OpenSans-Light.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('./assets/fonts/OpenSans-Regular.ttf') format('woff2');
+}
+@font-face {
+    font-family: 'OpenSansSemiBild';
+    src: url('./assets/fonts/OpenSans-SemiBold.ttf') format('woff2');
+}
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}

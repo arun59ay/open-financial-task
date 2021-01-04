@@ -1,0 +1,173 @@
+.dashboard {
+    background-color: #FCFCFF;
+    background: url('../../../assets/images/blob-small.svg') -10% 28% no-repeat padding-box,
+        url('../../../assets/images/circle.svg') 40rem -25rem no-repeat padding-box,
+        url('../../../assets/images/accounting_dots.svg') 26% 66% no-repeat padding-box,
+        url('../../../assets/images/accounting_dots.svg') 85% 75% no-repeat padding-box;
+    height: 100%;
+    position: relative;
+
+
+    .dashboardLayout {
+        height: 100vh;
+
+        .layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            height: 100%;
+            padding-top: 4rem;
+            
+            @media (max-width: 767px) {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .leftLayout {
+                height: 100%;
+
+                .leftLayout-cont {
+                    margin-left: 100px;
+
+                    .leftLayout-txt {
+                        font-size: 30px;
+                        width: 400px;
+                        font-weight: 500;
+                    }
+
+                    .layoutTxtBottom {
+                        height: 8px;
+                        border: none;
+                        border-radius: 13px;
+                        background-color: #000000;
+                        width: 236px;
+                    }
+
+                    .leftLayout-img {
+                        margin-top: 50px;
+                        width: 652px;
+                        height: 365px;
+                        margin-left: 20px;
+
+                        img {
+                            width: 60%;
+                            height: 60%;
+                        }
+
+                    }
+                }
+            }
+
+            .rightLayout {
+                height: 100%;
+
+                .calculator {
+
+                    .cardHeader {
+                        background: #fafbfd;
+                        text-align: center;
+                        padding: 10px;
+                        border-radius: 10px 10px 0px 0px;
+                        font-family: OpenSansRegular;
+                    }
+
+                    .calculator-left {
+                        background: #fff;
+                        border-radius: 20px;
+                        box-shadow: 0px 0px 20px #00000033;
+                        width: 45%;
+
+                        .emiCalculatorInner {
+                            padding: 10px 35px 35px 35px;
+                        }
+                    }
+
+                    .calculatedAmount {
+                        background: #6a379d;
+                        border-radius: 0 20px 20px 0;
+                        margin-left: 5px;
+                        padding: 60px 25px;
+
+                        .amountContainer {
+                            .loanAmount {
+                                font-size: 12px;
+                                color: #fff;
+                            }
+
+                            .loanAmountValue {
+                                font-size: 18px;
+                                color: #fff;
+                                font-weight: 600;
+
+                                .amount {
+                                    font-family: Montserrat-Regular;
+                                }
+                            }
+                        }
+
+                        .loanEmi {
+                            margin-top: 20px;
+
+                            .loanEmiLabel {
+                                font-size: 12px;
+                                color: #fff;
+                            }
+
+                            .loanEmiTenure {
+                                font-size: 18px;
+                                color: #fff;
+                                font-weight: 600;
+
+                                .tenure {
+                                    font-family: Montserrat-Regular;
+                                }
+                            }
+                        }
+
+                        .getBtn {
+                            margin-top: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .bottom-layout {
+            background: url('../../../assets/images/sol_wave_bg.svg') no-repeat padding-box;
+
+            .middleCard {
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .rightBusinessContent {
+                .leftLayout-txt {
+                    font-size: 30px;
+                    width: 400px;
+                    font-weight: 600;
+                    font-family: Montserrat-Regular;
+                }
+
+                .layoutTxtBottom {
+                    height: 8px;
+                    border: none;
+                    border-radius: 13px;
+                    background-color: #707070;
+                    width: 236px;
+                    margin-top: 40px;
+                }
+
+            }
+
+            .layoutDesc {
+                font-size: 14px;
+                font-family: Montserrat-Regular;
+                margin-top: 30px;
+            }
+
+            .openAccountBtn {
+                margin-top: 60px;
+            }
+        }
+    }
+}

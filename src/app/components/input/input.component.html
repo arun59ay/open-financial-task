@@ -1,0 +1,64 @@
+<ng-template ngFor let-inputData [ngForOf]="inputData">
+    <ng-container [ngSwitch]="inputData.controlType">
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'range'">
+            <div class="mt-3">
+                <div [style]="inputData?.labelStyle">{{inputData?.label}}</div>
+                <div>
+                    <div><span [class.limitStyle]="inputData?.limitStyle">&#8377;</span>&nbsp;<span
+                            [style]="inputData?.limitStyle">{{inputData?.limit}}</span></div>
+                    <input [type]="inputData?.type" [ngStyle]="inputData?.styles"
+                        [class.inputActive]="inputData?.inputActive" [placeholder]="inputData?.placeholder"
+                        class="slider" *ngIf="inputData" 
+                        [min]="inputData?.minAmount" [max]="inputData?.maxAmount"
+                        (change)="onSlide($event, inputData)"
+                        />
+                    <div class="d-flex justify-content-between limitValue" *ngIf="inputData?.limitValue">
+                        <div>&#8377; {{inputData?.minAmount}}</div>
+                        <div>&#8377; {{inputData?.maxAmount}}</div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'input'" *ngIf="isChecked">
+            <div class="mt-3">
+                <div [style]="inputData?.labelStyle">{{inputData?.label}}</div>
+                <div class="inputMoney">
+                    <div *ngIf="inputData?.moneyIcon" [class.limitStyle]="inputData?.limitStyle" [style]="inputData?.moneyInputIcon">&#8377;</div>
+                    <input [type]="inputData?.type" [ngStyle]="inputData?.styles"
+                        [class.inputActive]="inputData?.inputActive" [placeholder]="inputData?.placeholder"
+                        class="slider" *ngIf="inputData" (change)="getExistingEMI($event)"/>
+                </div>
+            </div>
+        </ng-template>
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'select'">
+            <div class="mt-3">
+                <div [style]="inputData?.labelStyle">{{inputData?.label}}</div>
+                <div [ngStyle]="inputData?.styles">
+                    <select class="selectTag" [class.optionsStyle]="inputData?.optionsStyle" (change)="onSelectTenure($event)">
+                        <option value="" class="text-white">{{inputData.placeholder}}</option>
+                        <option *ngFor="let option of inputData.options" [value]="option.value">{{option.optionName}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </ng-template>
+
+        <!-- template for generate input -->
+        <ng-template [ngSwitchCase]="'switch'">
+            <div class="switch mt-3">
+                <div [style]="inputData?.labelStyle">{{inputData?.label}}</div>
+                <div [ngStyle]="inputData?.styles" class="switchBtn">
+                    <input type="checkbox" id="switch" (change)="onCheck()" [checked]="isChecked"/><label for="switch"></label>
+                </div>
+            </div>
+        </ng-template>
+
+
+    </ng-container>
+</ng-template>

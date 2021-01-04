@@ -1,0 +1,41 @@
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 90px;
+
+    .headerLeftNavigation {
+        .companyIcon {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .headerNavigation {
+
+
+        .headerLink {
+            letter-spacing: 0px;
+            color: #222222;
+            opacity: 1;
+            font-family: OpenSansRegular;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 0px 15px;
+            cursor: pointer;
+
+            &:hover {
+                color: rgb(102, 51, 153);
+            }
+
+            &:active {
+                color: rgb(102, 51, 153);
+            }
+
+            &:focus {
+                color: rgb(102, 51, 153);
+            }
+
+        }
+    }
+}

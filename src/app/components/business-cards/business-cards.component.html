@@ -1,0 +1,9 @@
+<ng-template ngFor let-businessConfig [ngForOf]="businessConfig">
+    <div class="my-5 card">
+        <div class="businessImgContent">
+            <img src="../../../assets/icons/{{businessConfig?.cardImage}}" class="businessImg">
+        </div>
+        <div class="businessCardHeading">{{businessConfig?.cardHeading}}</div>
+        <div class="businessCardDescription">{{businessConfig?.cardDescription}}</div>
+    </div>
+</ng-template>

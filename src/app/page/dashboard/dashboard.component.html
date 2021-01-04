@@ -1,0 +1,99 @@
+<div class="dashboard">
+    <app-header></app-header>
+    <div class="dashboardLayout">
+        <div class="layout">
+            <div class="leftLayout">
+                <div class="leftLayout-cont">
+                    <div style="margin-left: 50px;">
+                        <div class="leftLayout-txt">
+                            <div>We make it Super</div>
+                            <div>Simple</div>
+                        </div>
+                        <div class="layoutTxtBottom"></div>
+                    </div>
+                    <div class="leftLayout-img">
+                        <img src="../../../assets/images/collect_img-video@2x.png" class="videoImg" />
+                    </div>
+                </div>
+            </div>
+            <div class="rightLayout">
+
+                <div>
+                    <div class="calculator">
+                        <div class="d-flex align-items-center cardBody">
+                            <div class="calculator-left">
+                                <div class="cardHeader">Eligibility Calculator</div>
+                                <div class="emiCalculatorInner">
+                                    <app-input [inputData]="data" (loanDetails)="getLoanInfo($event)" (btnClick)="onClickEventReceived($event)">
+                                    </app-input>
+                                </div>
+                            </div>
+                            <div class="calculatedAmount text-center">
+                                <div class="amountContainer">
+                                    <div class="loanAmount">
+                                        Loan Amount
+                                    </div>
+                                    <div class="loanAmountValue">
+                                        <span>&#8377; </span>
+                                        &nbsp;
+                                        <span class="amount">{{loanData.amount ? loanData.amount : '--'}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="loanEmi">
+                                    <div class="loanEmiLabel">
+                                        Your EMI will be
+                                    </div>
+                                    <div class="loanEmiTenure">
+                                        <span>&#8377;</span>
+                                        &nbsp;
+                                        <span class="tenure">{{loanData.emi ? loanData.emi : '--'}}</span>
+                                    </div>
+                                </div>
+
+                                <div class="getBtn">
+                                    <app-button [buttonConfig]="getMoney" (btnClick)="onClickEventReceived($event)">
+                                    </app-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="bottom-layout">
+            <div class="row m-0 px-5">
+                <div class="col-4 px-4">
+                    <app-business-cards [businessConfig]="leftBusinessConfig"></app-business-cards>
+                </div>
+                <div class="col-4 px-4">
+                    <div class="middleCard">
+                        <app-business-cards [businessConfig]="middleBusinessConfig"></app-business-cards>
+                    </div>
+                </div>
+                <div class="col-4 px-5">
+                    <div class="d-flex justifu-content-center align-items-center h-100">
+                        <div>
+                            <div class="rightBusinessContent">
+                                <div class="leftLayout-txt">
+                                    <div>Boost your business</div>
+                                    <div>with Open</div>
+                                </div>
+                                <div class="layoutTxtBottom"></div>
+                            </div>
+                            <div class="layoutDesc">
+                                Get your hands on a term loan that’s crafted for your business
+                            </div>
+                            <div class="openAccountBtn">
+                                <app-button [buttonConfig]="getOpenAccount" (btnClick)="onClickEventReceived($event)">
+                                </app-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

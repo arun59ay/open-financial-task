@@ -1,0 +1,12 @@
+<header class="headerContainer">
+    <div class="headerLeftNavigation">
+        <img src="../../../assets/images/logo@2x.png" class="companyIcon" />
+    </div>
+    <div class="headerNavigation">
+        <a class="headerLink">Products</a>
+        <a class="headerLink">Solutions</a>
+        <a class="headerLink">Pricing</a>
+        <app-button [buttonConfig]="login" (btnClick)="onClickEventReceived($event)"></app-button>
+        <app-button [buttonConfig]="getStarted" (btnClick)="onClickEventReceived($event)"></app-button>
+    </div>
+</header>

@@ -1,0 +1,4 @@
+<button [type]="buttonConfig?.type" class="btn"  [ngStyle]="buttonConfig?.styles" 
+[class.btnCust]="buttonConfig?.class"  (click)="onClick($event)" *ngIf="buttonConfig">
+    {{ buttonConfig.text}}
+  </button>
